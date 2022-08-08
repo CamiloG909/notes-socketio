@@ -23,7 +23,7 @@ module.exports = (io) => {
 		socket.on("client:getnotebyid", async (id) => {
 			const note = await Note.findById(id);
 
-			io.emit("server:selectednote", note);
+			socket.emit("server:selectednote", note);
 		});
 
 		socket.on("client:updatenote", async ({ id, title, description }) => {
