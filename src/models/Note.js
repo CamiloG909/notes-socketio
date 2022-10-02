@@ -14,6 +14,7 @@ const Note = new Schema(
 	{
 		versionKey: false,
 		timestamps: true,
+		collection: "notes-socketio",
 	}
 );
 
